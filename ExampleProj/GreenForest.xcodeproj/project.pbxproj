@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		961D4C9224712AA60003A484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961D4C9024712AA60003A484 /* Main.storyboard */; };
 		961D4C9424712AA80003A484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 961D4C9324712AA80003A484 /* Assets.xcassets */; };
 		961D4C9724712AA80003A484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961D4C9524712AA80003A484 /* LaunchScreen.storyboard */; };
+		9629D72B2476F98300B1F16B /* Pole in Frameworks */ = {isa = PBXBuildFile; productRef = 9629D72A2476F98300B1F16B /* Pole */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9629D72B2476F98300B1F16B /* Pole in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = GreenForest;
+			packageProductDependencies = (
+				9629D72A2476F98300B1F16B /* Pole */,
+			);
 			productName = GreenForest;
 			productReference = 961D4C8724712AA60003A484 /* GreenForest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 961D4C7E24712AA60003A484;
+			packageReferences = (
+				9629D7292476F98300B1F16B /* XCRemoteSwiftPackageReference "Pole" */,
+			);
 			productRefGroup = 961D4C8824712AA60003A484 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -338,6 +346,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9629D7292476F98300B1F16B /* XCRemoteSwiftPackageReference "Pole" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jaesung-wwdc/Pole";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9629D72A2476F98300B1F16B /* Pole */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9629D7292476F98300B1F16B /* XCRemoteSwiftPackageReference "Pole" */;
+			productName = Pole;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 961D4C7F24712AA60003A484 /* Project object */;
 }

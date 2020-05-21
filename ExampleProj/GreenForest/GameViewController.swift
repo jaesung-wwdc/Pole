@@ -6,6 +6,7 @@
 //  Copyright © 2020 SweetLab. All rights reserved.
 //
 
+import Pole
 import UIKit
 import QuartzCore
 import SceneKit
@@ -43,7 +44,6 @@ class GameViewController: UIViewController {
         }
     }
     
-    
     private func addTreeToEarth(_ earth: SCNNode) {
         guard let scene = SCNScene(named: "art.scnassets/tree.scn") else { return }
         // If you use rootNode as treeNode, will face
@@ -51,21 +51,13 @@ class GameViewController: UIViewController {
         guard let treeNode = scene.rootNode.childNode(withName: "Trunk", recursively: true) else { return }
         let latitude = CGFloat.random(in: -180..<180)
         let longitude = CGFloat.random(in: -180..<180)
-        treeNode.position = convertedAxisFromAngle(radius: 4.0, latitude: latitude, longitude: longitude)
-        treeNode.eulerAngles = SCNVector3((latitude) * .pi / CGFloat(180), 0, (longitude - 90) * .pi / CGFloat(180))  // y axis is ignorable
+        
+        // MARK: Pole SPM
+        let point = Point(r: 4.0, lat: latitude, lng: longitude)
+        treeNode.makePerpendicular(at: point)
         
         earth.addChildNode(treeNode)
     }
-    
-    private func convertedAxisFromAngle(radius: CGFloat, latitude: CGFloat, longitude: CGFloat) -> SCNVector3 {
-        let xy = radius * cos(latitude * .pi / CGFloat(180))
-        let x = xy * cos(longitude * .pi / CGFloat(180))
-        let y = xy * sin(longitude * .pi / CGFloat(180))
-        let z = radius * sin(latitude * .pi / CGFloat(180))
-        
-        return SCNVector3(x, y, z)
-    }
-    
     
     // MARK: - Animation
     private func rotateEarth() {

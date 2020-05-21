@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Pole",
+        "repositoryURL": "https://github.com/jaesung-wwdc/Pole",
+        "state": {
+          "branch": null,
+          "revision": "f8d1331a154eae0464dda8a8bc21c34df5767abd",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
