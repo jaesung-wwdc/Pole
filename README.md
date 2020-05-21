@@ -4,6 +4,10 @@ Stand a pole perpendicular to sphere at a specifi point
 
 - Copyright: ©Jaesung
 
+## Swift @ home 🏠
+
+## How to use
+
 Xcode > File > Swift Packages > Add Package Dependency > Enter repository URL: https://github.com/jaesung-wwdc/Pole
 
 ```Swift
